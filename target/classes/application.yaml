@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    username: mianshidb
+    password: 'mianshi123'
+    url: jdbc:mysql://49.234.40.241:3306/mianshidb?characterEncoding=UTF-8&&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
