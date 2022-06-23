@@ -16,23 +16,23 @@ public class UserinfoController {
 
     private Gson gson =new Gson();
 
-    @GetMapping("/userinfo")
+    @GetMapping("/userinfo/select")
     public String getUserinfo() {
         List<Userinfo> userinfos = userinfoMapper.selectList(null);
         return gson.toJson(userinfos);
     }
 
-    @PostMapping("/insert")
+    @PostMapping("/userinfo/insert")
     public void addUserinfo(@RequestBody Userinfo userinfo) {
         userinfoMapper.insert(userinfo);
     }
 
-    @PostMapping("/delete")
+    @PostMapping("/userinfo/delete")
     public void removeUserinfo(@RequestBody Userinfo userinfo) {
         userinfoMapper.deleteById(userinfo);
     }
 
-    @PostMapping("/update")
+    @PostMapping("/userinfo/update")
     public void updateUserinfo(@RequestBody Userinfo userinfo) {
         userinfoMapper.updateById(userinfo);
     }
